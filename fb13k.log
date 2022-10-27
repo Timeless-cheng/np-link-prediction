@@ -1,0 +1,16 @@
+2022-10-27 06:05:59,381 - INFO: Namespace(bases=100, dataset='FB15k-237', dropout=0.3, embed_size=100, evaluate_every=500, few=3, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=15000, negative_sample=32, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-27 06:06:43,117 - INFO: Epoch: 0 - Validation
+2022-10-27 06:06:43,169 - INFO: Total MRR (filtered): 0.059255
+2022-10-27 06:06:43,178 - INFO: Total Hits (filtered) @ 1: 0.038817
+2022-10-27 06:06:43,187 - INFO: Total Hits (filtered) @ 3: 0.063155
+2022-10-27 06:06:43,199 - INFO: Total Hits (filtered) @ 10: 0.091189
+2022-10-27 07:24:32,887 - INFO: Epoch: 500 - Validation
+2022-10-27 07:24:32,982 - INFO: Total MRR (filtered): 0.261420
+2022-10-27 07:24:32,999 - INFO: Total Hits (filtered) @ 1: 0.193777
+2022-10-27 07:24:33,010 - INFO: Total Hits (filtered) @ 3: 0.286198
+2022-10-27 07:24:33,018 - INFO: Total Hits (filtered) @ 10: 0.391559
+2022-10-27 08:43:18,389 - INFO: Epoch: 1000 - Validation
+2022-10-27 08:43:18,483 - INFO: Total MRR (filtered): 0.252601
+2022-10-27 08:43:18,497 - INFO: Total Hits (filtered) @ 1: 0.181146
+2022-10-27 08:43:18,519 - INFO: Total Hits (filtered) @ 3: 0.273259
+2022-10-27 08:43:18,528 - INFO: Total Hits (filtered) @ 10: 0.388170

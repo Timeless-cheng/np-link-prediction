@@ -1,0 +1,303 @@
+2022-10-21 15:31:25,781 - INFO: Namespace(bases=100, dataset='FB15k-237', dropout=0.3, embed_size=100, evaluate_every=1000, few=3, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=32, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-21 15:31:54,803 - INFO: Epoch: 0 - Validation
+2022-10-21 15:31:54,805 - INFO: Total MRR (filtered): 0.089520
+2022-10-21 15:31:54,805 - INFO: Total Hits (filtered) @ 1: 0.062230
+2022-10-21 15:31:54,805 - INFO: Total Hits (filtered) @ 3: 0.094886
+2022-10-21 15:31:54,805 - INFO: Total Hits (filtered) @ 10: 0.142329
+2022-10-21 16:50:38,961 - INFO: Epoch: 1000 - Validation
+2022-10-21 16:50:39,210 - INFO: Total MRR (filtered): 0.283211
+2022-10-21 16:50:39,210 - INFO: Total Hits (filtered) @ 1: 0.213802
+2022-10-21 16:50:39,210 - INFO: Total Hits (filtered) @ 3: 0.301910
+2022-10-21 16:50:39,210 - INFO: Total Hits (filtered) @ 10: 0.413740
+2022-10-21 18:11:27,985 - INFO: Epoch: 2000 - Validation
+2022-10-21 18:11:28,219 - INFO: Total MRR (filtered): 0.301983
+2022-10-21 18:11:28,219 - INFO: Total Hits (filtered) @ 1: 0.225816
+2022-10-21 18:11:28,219 - INFO: Total Hits (filtered) @ 3: 0.326556
+2022-10-21 18:11:28,219 - INFO: Total Hits (filtered) @ 10: 0.449168
+2022-10-21 19:32:55,243 - INFO: Epoch: 3000 - Validation
+2022-10-21 19:32:55,443 - INFO: Total MRR (filtered): 0.319100
+2022-10-21 19:32:55,444 - INFO: Total Hits (filtered) @ 1: 0.243993
+2022-10-21 19:32:55,444 - INFO: Total Hits (filtered) @ 3: 0.343500
+2022-10-21 19:32:55,444 - INFO: Total Hits (filtered) @ 10: 0.465804
+2022-10-21 20:54:32,606 - INFO: Epoch: 4000 - Validation
+2022-10-21 20:54:32,778 - INFO: Total MRR (filtered): 0.317549
+2022-10-21 20:54:32,778 - INFO: Total Hits (filtered) @ 1: 0.236907
+2022-10-21 20:54:32,778 - INFO: Total Hits (filtered) @ 3: 0.350277
+2022-10-21 20:54:32,778 - INFO: Total Hits (filtered) @ 10: 0.475970
+2022-10-21 22:16:12,280 - INFO: Epoch: 5000 - Validation
+2022-10-21 22:16:12,301 - INFO: Total MRR (filtered): 0.326255
+2022-10-21 22:16:12,301 - INFO: Total Hits (filtered) @ 1: 0.247073
+2022-10-21 22:16:12,301 - INFO: Total Hits (filtered) @ 3: 0.355206
+2022-10-21 22:16:12,302 - INFO: Total Hits (filtered) @ 10: 0.483672
+2022-10-21 23:37:56,767 - INFO: Epoch: 6000 - Validation
+2022-10-21 23:37:56,940 - INFO: Total MRR (filtered): 0.326704
+2022-10-21 23:37:56,940 - INFO: Total Hits (filtered) @ 1: 0.245225
+2022-10-21 23:37:56,940 - INFO: Total Hits (filtered) @ 3: 0.359827
+2022-10-21 23:37:56,940 - INFO: Total Hits (filtered) @ 10: 0.486137
+2022-10-22 00:59:38,254 - INFO: Epoch: 7000 - Validation
+2022-10-22 00:59:38,477 - INFO: Total MRR (filtered): 0.326910
+2022-10-22 00:59:38,477 - INFO: Total Hits (filtered) @ 1: 0.243376
+2022-10-22 00:59:38,477 - INFO: Total Hits (filtered) @ 3: 0.361984
+2022-10-22 00:59:38,477 - INFO: Total Hits (filtered) @ 10: 0.490450
+2022-10-22 02:20:50,277 - INFO: Epoch: 8000 - Validation
+2022-10-22 02:20:50,370 - INFO: Total MRR (filtered): 0.329180
+2022-10-22 02:20:50,370 - INFO: Total Hits (filtered) @ 1: 0.247998
+2022-10-22 02:20:50,370 - INFO: Total Hits (filtered) @ 3: 0.363524
+2022-10-22 02:20:50,370 - INFO: Total Hits (filtered) @ 10: 0.488909
+2022-10-22 03:43:34,101 - INFO: Epoch: 9000 - Validation
+2022-10-22 03:43:34,196 - INFO: Total MRR (filtered): 0.330786
+2022-10-22 03:43:34,196 - INFO: Total Hits (filtered) @ 1: 0.247998
+2022-10-22 03:43:34,196 - INFO: Total Hits (filtered) @ 3: 0.366913
+2022-10-22 03:43:34,196 - INFO: Total Hits (filtered) @ 10: 0.492914
+2022-10-22 05:09:17,849 - INFO: Epoch: 10000 - Validation
+2022-10-22 05:09:17,917 - INFO: Total MRR (filtered): 0.330217
+2022-10-22 05:09:17,917 - INFO: Total Hits (filtered) @ 1: 0.247998
+2022-10-22 05:09:17,917 - INFO: Total Hits (filtered) @ 3: 0.370610
+2022-10-22 05:09:17,917 - INFO: Total Hits (filtered) @ 10: 0.486753
+2022-10-22 06:34:46,594 - INFO: Epoch: 11000 - Validation
+2022-10-22 06:34:46,783 - INFO: Total MRR (filtered): 0.327235
+2022-10-22 06:34:46,783 - INFO: Total Hits (filtered) @ 1: 0.243068
+2022-10-22 06:34:46,783 - INFO: Total Hits (filtered) @ 3: 0.367221
+2022-10-22 06:34:46,783 - INFO: Total Hits (filtered) @ 10: 0.489834
+2022-10-22 08:00:23,015 - INFO: Epoch: 12000 - Validation
+2022-10-22 08:00:23,158 - INFO: Total MRR (filtered): 0.331562
+2022-10-22 08:00:23,158 - INFO: Total Hits (filtered) @ 1: 0.252927
+2022-10-22 08:00:23,158 - INFO: Total Hits (filtered) @ 3: 0.368145
+2022-10-22 08:00:23,158 - INFO: Total Hits (filtered) @ 10: 0.491066
+2022-10-22 09:26:14,565 - INFO: Epoch: 13000 - Validation
+2022-10-22 09:26:14,659 - INFO: Total MRR (filtered): 0.334320
+2022-10-22 09:26:14,660 - INFO: Total Hits (filtered) @ 1: 0.254467
+2022-10-22 09:26:14,660 - INFO: Total Hits (filtered) @ 3: 0.367529
+2022-10-22 09:26:14,660 - INFO: Total Hits (filtered) @ 10: 0.495995
+2022-10-22 10:52:19,343 - INFO: Epoch: 14000 - Validation
+2022-10-22 10:52:19,553 - INFO: Total MRR (filtered): 0.340056
+2022-10-22 10:52:19,553 - INFO: Total Hits (filtered) @ 1: 0.260012
+2022-10-22 10:52:19,553 - INFO: Total Hits (filtered) @ 3: 0.375847
+2022-10-22 10:52:19,553 - INFO: Total Hits (filtered) @ 10: 0.495071
+2022-10-22 12:18:11,166 - INFO: Epoch: 15000 - Validation
+2022-10-22 12:18:11,450 - INFO: Total MRR (filtered): 0.330544
+2022-10-22 12:18:11,450 - INFO: Total Hits (filtered) @ 1: 0.249538
+2022-10-22 12:18:11,450 - INFO: Total Hits (filtered) @ 3: 0.368762
+2022-10-22 12:18:11,450 - INFO: Total Hits (filtered) @ 10: 0.487677
+2022-10-22 13:43:58,262 - INFO: Epoch: 16000 - Validation
+2022-10-22 13:43:58,391 - INFO: Total MRR (filtered): 0.333950
+2022-10-22 13:43:58,391 - INFO: Total Hits (filtered) @ 1: 0.256007
+2022-10-22 13:43:58,391 - INFO: Total Hits (filtered) @ 3: 0.366605
+2022-10-22 13:43:58,391 - INFO: Total Hits (filtered) @ 10: 0.485521
+2022-10-22 15:09:19,230 - INFO: Epoch: 17000 - Validation
+2022-10-22 15:09:19,457 - INFO: Total MRR (filtered): 0.328280
+2022-10-22 15:09:19,458 - INFO: Total Hits (filtered) @ 1: 0.249846
+2022-10-22 15:09:19,458 - INFO: Total Hits (filtered) @ 3: 0.363832
+2022-10-22 15:09:19,458 - INFO: Total Hits (filtered) @ 10: 0.484288
+2022-10-22 16:34:18,859 - INFO: Epoch: 18000 - Validation
+2022-10-22 16:34:19,090 - INFO: Total MRR (filtered): 0.332916
+2022-10-22 16:34:19,091 - INFO: Total Hits (filtered) @ 1: 0.253851
+2022-10-22 16:34:19,091 - INFO: Total Hits (filtered) @ 3: 0.369686
+2022-10-22 16:34:19,091 - INFO: Total Hits (filtered) @ 10: 0.485213
+2022-10-22 17:58:59,487 - INFO: Epoch: 19000 - Validation
+2022-10-22 17:58:59,708 - INFO: Total MRR (filtered): 0.328278
+2022-10-22 17:58:59,708 - INFO: Total Hits (filtered) @ 1: 0.248922
+2022-10-22 17:58:59,708 - INFO: Total Hits (filtered) @ 3: 0.367837
+2022-10-22 17:58:59,708 - INFO: Total Hits (filtered) @ 10: 0.481824
+2022-10-22 19:23:37,499 - INFO: Epoch: 20000 - Validation
+2022-10-22 19:23:37,567 - INFO: Total MRR (filtered): 0.325310
+2022-10-22 19:23:37,567 - INFO: Total Hits (filtered) @ 1: 0.249538
+2022-10-22 19:23:37,567 - INFO: Total Hits (filtered) @ 3: 0.358903
+2022-10-22 19:23:37,567 - INFO: Total Hits (filtered) @ 10: 0.473198
+2022-10-22 20:48:10,236 - INFO: Epoch: 21000 - Validation
+2022-10-22 20:48:10,411 - INFO: Total MRR (filtered): 0.329411
+2022-10-22 20:48:10,411 - INFO: Total Hits (filtered) @ 1: 0.253543
+2022-10-22 20:48:10,411 - INFO: Total Hits (filtered) @ 3: 0.364140
+2022-10-22 20:48:10,411 - INFO: Total Hits (filtered) @ 10: 0.475046
+2022-10-22 22:12:07,864 - INFO: Epoch: 22000 - Validation
+2022-10-22 22:12:08,006 - INFO: Total MRR (filtered): 0.325561
+2022-10-22 22:12:08,007 - INFO: Total Hits (filtered) @ 1: 0.251694
+2022-10-22 22:12:08,007 - INFO: Total Hits (filtered) @ 3: 0.354590
+2022-10-22 22:12:08,007 - INFO: Total Hits (filtered) @ 10: 0.475354
+2022-10-22 23:36:21,651 - INFO: Epoch: 23000 - Validation
+2022-10-22 23:36:21,781 - INFO: Total MRR (filtered): 0.325133
+2022-10-22 23:36:21,781 - INFO: Total Hits (filtered) @ 1: 0.251386
+2022-10-22 23:36:21,781 - INFO: Total Hits (filtered) @ 3: 0.359519
+2022-10-22 23:36:21,781 - INFO: Total Hits (filtered) @ 10: 0.470425
+2022-10-23 01:00:52,997 - INFO: Epoch: 24000 - Validation
+2022-10-23 01:00:53,187 - INFO: Total MRR (filtered): 0.325324
+2022-10-23 01:00:53,187 - INFO: Total Hits (filtered) @ 1: 0.252619
+2022-10-23 01:00:53,187 - INFO: Total Hits (filtered) @ 3: 0.355514
+2022-10-23 01:00:53,187 - INFO: Total Hits (filtered) @ 10: 0.467961
+2022-10-23 02:25:27,059 - INFO: Namespace(bases=100, dataset='FB15k-237', dropout=0.3, embed_size=100, evaluate_every=1000, few=1, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=32, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-23 02:26:06,988 - INFO: Epoch: 0 - Validation
+2022-10-23 02:26:06,989 - INFO: Total MRR (filtered): 0.084223
+2022-10-23 02:26:06,989 - INFO: Total Hits (filtered) @ 1: 0.057758
+2022-10-23 02:26:06,989 - INFO: Total Hits (filtered) @ 3: 0.089211
+2022-10-23 02:26:06,989 - INFO: Total Hits (filtered) @ 10: 0.135341
+2022-10-23 03:51:03,310 - INFO: Epoch: 1000 - Validation
+2022-10-23 03:51:03,411 - INFO: Total MRR (filtered): 0.268620
+2022-10-23 03:51:03,411 - INFO: Total Hits (filtered) @ 1: 0.201868
+2022-10-23 03:51:03,412 - INFO: Total Hits (filtered) @ 3: 0.290316
+2022-10-23 03:51:03,412 - INFO: Total Hits (filtered) @ 10: 0.391536
+2022-10-23 05:17:15,718 - INFO: Epoch: 2000 - Validation
+2022-10-23 05:17:15,919 - INFO: Total MRR (filtered): 0.288958
+2022-10-23 05:17:15,920 - INFO: Total Hits (filtered) @ 1: 0.218833
+2022-10-23 05:17:15,920 - INFO: Total Hits (filtered) @ 3: 0.312047
+2022-10-23 05:17:15,920 - INFO: Total Hits (filtered) @ 10: 0.424514
+2022-10-23 06:42:42,787 - INFO: Epoch: 3000 - Validation
+2022-10-23 06:42:42,894 - INFO: Total MRR (filtered): 0.293424
+2022-10-23 06:42:42,894 - INFO: Total Hits (filtered) @ 1: 0.222265
+2022-10-23 06:42:42,894 - INFO: Total Hits (filtered) @ 3: 0.317194
+2022-10-23 06:42:42,894 - INFO: Total Hits (filtered) @ 10: 0.436332
+2022-10-23 08:07:05,354 - INFO: Epoch: 4000 - Validation
+2022-10-23 08:07:05,585 - INFO: Total MRR (filtered): 0.299794
+2022-10-23 08:07:05,585 - INFO: Total Hits (filtered) @ 1: 0.227030
+2022-10-23 08:07:05,585 - INFO: Total Hits (filtered) @ 3: 0.322341
+2022-10-23 08:07:05,585 - INFO: Total Hits (filtered) @ 10: 0.447388
+2022-10-23 09:30:33,767 - INFO: Epoch: 5000 - Validation
+2022-10-23 09:30:33,824 - INFO: Total MRR (filtered): 0.301786
+2022-10-23 09:30:33,824 - INFO: Total Hits (filtered) @ 1: 0.227983
+2022-10-23 09:30:33,824 - INFO: Total Hits (filtered) @ 3: 0.329584
+2022-10-23 09:30:33,824 - INFO: Total Hits (filtered) @ 10: 0.447960
+2022-10-23 10:57:40,751 - INFO: Epoch: 6000 - Validation
+2022-10-23 10:57:40,847 - INFO: Total MRR (filtered): 0.303229
+2022-10-23 10:57:40,847 - INFO: Total Hits (filtered) @ 1: 0.228746
+2022-10-23 10:57:40,847 - INFO: Total Hits (filtered) @ 3: 0.330538
+2022-10-23 10:57:40,847 - INFO: Total Hits (filtered) @ 10: 0.449485
+2022-10-23 12:23:45,100 - INFO: Epoch: 7000 - Validation
+2022-10-23 12:23:45,219 - INFO: Total MRR (filtered): 0.306447
+2022-10-23 12:23:45,219 - INFO: Total Hits (filtered) @ 1: 0.231796
+2022-10-23 12:23:45,219 - INFO: Total Hits (filtered) @ 3: 0.335684
+2022-10-23 12:23:45,219 - INFO: Total Hits (filtered) @ 10: 0.453298
+2022-10-23 13:49:38,865 - INFO: Epoch: 8000 - Validation
+2022-10-23 13:49:39,033 - INFO: Total MRR (filtered): 0.309214
+2022-10-23 13:49:39,033 - INFO: Total Hits (filtered) @ 1: 0.236752
+2022-10-23 13:49:39,033 - INFO: Total Hits (filtered) @ 3: 0.337209
+2022-10-23 13:49:39,033 - INFO: Total Hits (filtered) @ 10: 0.453488
+2022-10-23 15:15:31,612 - INFO: Epoch: 9000 - Validation
+2022-10-23 15:15:31,783 - INFO: Total MRR (filtered): 0.305751
+2022-10-23 15:15:31,783 - INFO: Total Hits (filtered) @ 1: 0.234083
+2022-10-23 15:15:31,783 - INFO: Total Hits (filtered) @ 3: 0.332634
+2022-10-23 15:15:31,783 - INFO: Total Hits (filtered) @ 10: 0.445864
+2022-10-23 15:51:46,317 - INFO: Namespace(bases=100, dataset='FB15k-237', dropout=0.3, embed_size=100, evaluate_every=1000, few=1, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=32, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-23 15:52:26,472 - INFO: Epoch: 0 - Validation
+2022-10-23 15:52:26,473 - INFO: Total MRR (filtered): 0.084223
+2022-10-23 15:52:26,473 - INFO: Total Hits (filtered) @ 1: 0.057758
+2022-10-23 15:52:26,473 - INFO: Total Hits (filtered) @ 3: 0.089211
+2022-10-23 15:52:26,473 - INFO: Total Hits (filtered) @ 10: 0.135341
+2022-10-23 17:17:21,841 - INFO: Epoch: 1000 - Validation
+2022-10-23 17:17:22,008 - INFO: Total MRR (filtered): 0.268641
+2022-10-23 17:17:22,008 - INFO: Total Hits (filtered) @ 1: 0.202249
+2022-10-23 17:17:22,008 - INFO: Total Hits (filtered) @ 3: 0.290698
+2022-10-23 17:17:22,008 - INFO: Total Hits (filtered) @ 10: 0.390965
+2022-10-23 18:42:10,344 - INFO: Epoch: 2000 - Validation
+2022-10-23 18:42:10,471 - INFO: Total MRR (filtered): 0.288670
+2022-10-23 18:42:10,471 - INFO: Total Hits (filtered) @ 1: 0.218071
+2022-10-23 18:42:10,471 - INFO: Total Hits (filtered) @ 3: 0.311285
+2022-10-23 18:42:10,471 - INFO: Total Hits (filtered) @ 10: 0.426420
+2022-10-23 20:06:54,738 - INFO: Epoch: 3000 - Validation
+2022-10-23 20:06:54,942 - INFO: Total MRR (filtered): 0.293545
+2022-10-23 20:06:54,943 - INFO: Total Hits (filtered) @ 1: 0.222455
+2022-10-23 20:06:54,943 - INFO: Total Hits (filtered) @ 3: 0.316432
+2022-10-23 20:06:54,943 - INFO: Total Hits (filtered) @ 10: 0.439001
+2022-10-23 21:32:06,830 - INFO: Epoch: 4000 - Validation
+2022-10-23 21:32:06,991 - INFO: Total MRR (filtered): 0.299789
+2022-10-23 21:32:06,991 - INFO: Total Hits (filtered) @ 1: 0.226649
+2022-10-23 21:32:06,991 - INFO: Total Hits (filtered) @ 3: 0.321960
+2022-10-23 21:32:06,991 - INFO: Total Hits (filtered) @ 10: 0.448913
+2022-10-23 22:57:16,482 - INFO: Epoch: 5000 - Validation
+2022-10-23 22:57:16,681 - INFO: Total MRR (filtered): 0.302646
+2022-10-23 22:57:16,681 - INFO: Total Hits (filtered) @ 1: 0.229127
+2022-10-23 22:57:16,681 - INFO: Total Hits (filtered) @ 3: 0.329013
+2022-10-23 22:57:16,681 - INFO: Total Hits (filtered) @ 10: 0.447770
+2022-10-24 00:22:16,664 - INFO: Epoch: 6000 - Validation
+2022-10-24 00:22:16,914 - INFO: Total MRR (filtered): 0.303319
+2022-10-24 00:22:16,914 - INFO: Total Hits (filtered) @ 1: 0.229508
+2022-10-24 00:22:16,914 - INFO: Total Hits (filtered) @ 3: 0.330347
+2022-10-24 00:22:16,914 - INFO: Total Hits (filtered) @ 10: 0.452345
+2022-10-24 01:46:56,934 - INFO: Epoch: 7000 - Validation
+2022-10-24 01:46:57,148 - INFO: Total MRR (filtered): 0.306663
+2022-10-24 01:46:57,148 - INFO: Total Hits (filtered) @ 1: 0.233321
+2022-10-24 01:46:57,148 - INFO: Total Hits (filtered) @ 3: 0.334922
+2022-10-24 01:46:57,148 - INFO: Total Hits (filtered) @ 10: 0.456538
+2022-10-24 03:11:07,756 - INFO: Epoch: 8000 - Validation
+2022-10-24 03:11:07,832 - INFO: Total MRR (filtered): 0.309194
+2022-10-24 03:11:07,832 - INFO: Total Hits (filtered) @ 1: 0.235989
+2022-10-24 03:11:07,832 - INFO: Total Hits (filtered) @ 3: 0.337400
+2022-10-24 03:11:07,832 - INFO: Total Hits (filtered) @ 10: 0.450629
+2022-10-24 04:36:21,141 - INFO: Epoch: 9000 - Validation
+2022-10-24 04:36:21,265 - INFO: Total MRR (filtered): 0.305427
+2022-10-24 04:36:21,265 - INFO: Total Hits (filtered) @ 1: 0.233892
+2022-10-24 04:36:21,265 - INFO: Total Hits (filtered) @ 3: 0.331491
+2022-10-24 04:36:21,265 - INFO: Total Hits (filtered) @ 10: 0.450820
+2022-10-24 06:01:29,646 - INFO: Epoch: 10000 - Validation
+2022-10-24 06:01:29,781 - INFO: Total MRR (filtered): 0.304596
+2022-10-24 06:01:29,781 - INFO: Total Hits (filtered) @ 1: 0.234464
+2022-10-24 06:01:29,782 - INFO: Total Hits (filtered) @ 3: 0.332444
+2022-10-24 06:01:29,782 - INFO: Total Hits (filtered) @ 10: 0.439764
+2022-10-24 07:26:23,162 - INFO: Epoch: 11000 - Validation
+2022-10-24 07:26:23,282 - INFO: Total MRR (filtered): 0.301968
+2022-10-24 07:26:23,282 - INFO: Total Hits (filtered) @ 1: 0.229318
+2022-10-24 07:26:23,282 - INFO: Total Hits (filtered) @ 3: 0.333397
+2022-10-24 07:26:23,282 - INFO: Total Hits (filtered) @ 10: 0.436142
+2022-10-24 08:51:07,431 - INFO: Epoch: 12000 - Validation
+2022-10-24 08:51:07,509 - INFO: Total MRR (filtered): 0.304743
+2022-10-24 08:51:07,509 - INFO: Total Hits (filtered) @ 1: 0.233321
+2022-10-24 08:51:07,509 - INFO: Total Hits (filtered) @ 3: 0.335112
+2022-10-24 08:51:07,509 - INFO: Total Hits (filtered) @ 10: 0.442242
+2022-10-24 10:15:08,327 - INFO: Epoch: 13000 - Validation
+2022-10-24 10:15:09,459 - INFO: Total MRR (filtered): 0.310442
+2022-10-24 10:15:09,459 - INFO: Total Hits (filtered) @ 1: 0.240564
+2022-10-24 10:15:09,459 - INFO: Total Hits (filtered) @ 3: 0.339878
+2022-10-24 10:15:09,459 - INFO: Total Hits (filtered) @ 10: 0.446817
+2022-10-24 11:38:17,216 - INFO: Epoch: 14000 - Validation
+2022-10-24 11:38:17,385 - INFO: Total MRR (filtered): 0.306289
+2022-10-24 11:38:17,385 - INFO: Total Hits (filtered) @ 1: 0.235608
+2022-10-24 11:38:17,385 - INFO: Total Hits (filtered) @ 3: 0.332825
+2022-10-24 11:38:17,385 - INFO: Total Hits (filtered) @ 10: 0.446245
+2022-10-24 13:02:17,286 - INFO: Epoch: 15000 - Validation
+2022-10-24 13:02:17,627 - INFO: Total MRR (filtered): 0.309305
+2022-10-24 13:02:17,627 - INFO: Total Hits (filtered) @ 1: 0.240183
+2022-10-24 13:02:17,627 - INFO: Total Hits (filtered) @ 3: 0.337591
+2022-10-24 13:02:17,627 - INFO: Total Hits (filtered) @ 10: 0.441670
+2022-10-24 14:24:07,979 - INFO: Epoch: 16000 - Validation
+2022-10-24 14:24:08,121 - INFO: Total MRR (filtered): 0.308429
+2022-10-24 14:24:08,121 - INFO: Total Hits (filtered) @ 1: 0.240564
+2022-10-24 14:24:08,121 - INFO: Total Hits (filtered) @ 3: 0.335112
+2022-10-24 14:24:08,121 - INFO: Total Hits (filtered) @ 10: 0.443576
+2022-10-24 15:46:40,888 - INFO: Epoch: 17000 - Validation
+2022-10-24 15:46:41,063 - INFO: Total MRR (filtered): 0.303476
+2022-10-24 15:46:41,063 - INFO: Total Hits (filtered) @ 1: 0.234083
+2022-10-24 15:46:41,063 - INFO: Total Hits (filtered) @ 3: 0.332063
+2022-10-24 15:46:41,064 - INFO: Total Hits (filtered) @ 10: 0.440907
+2022-10-24 17:09:23,188 - INFO: Epoch: 18000 - Validation
+2022-10-24 17:09:23,347 - INFO: Total MRR (filtered): 0.303645
+2022-10-24 17:09:23,347 - INFO: Total Hits (filtered) @ 1: 0.235036
+2022-10-24 17:09:23,347 - INFO: Total Hits (filtered) @ 3: 0.333016
+2022-10-24 17:09:23,347 - INFO: Total Hits (filtered) @ 10: 0.432711
+2022-10-24 18:30:51,817 - INFO: Epoch: 19000 - Validation
+2022-10-24 18:30:51,984 - INFO: Total MRR (filtered): 0.300784
+2022-10-24 18:30:51,984 - INFO: Total Hits (filtered) @ 1: 0.232558
+2022-10-24 18:30:51,984 - INFO: Total Hits (filtered) @ 3: 0.330347
+2022-10-24 18:30:51,984 - INFO: Total Hits (filtered) @ 10: 0.429089
+2022-10-24 19:51:41,887 - INFO: Epoch: 20000 - Validation
+2022-10-24 19:51:41,954 - INFO: Total MRR (filtered): 0.301224
+2022-10-24 19:51:41,955 - INFO: Total Hits (filtered) @ 1: 0.234274
+2022-10-24 19:51:41,955 - INFO: Total Hits (filtered) @ 3: 0.327106
+2022-10-24 19:51:41,955 - INFO: Total Hits (filtered) @ 10: 0.431948
+2022-10-24 21:12:31,033 - INFO: Epoch: 21000 - Validation
+2022-10-24 21:12:31,145 - INFO: Total MRR (filtered): 0.300440
+2022-10-24 21:12:31,145 - INFO: Total Hits (filtered) @ 1: 0.234655
+2022-10-24 21:12:31,145 - INFO: Total Hits (filtered) @ 3: 0.328059
+2022-10-24 21:12:31,145 - INFO: Total Hits (filtered) @ 10: 0.431567
+2022-10-24 22:33:24,115 - INFO: Epoch: 22000 - Validation
+2022-10-24 22:33:24,271 - INFO: Total MRR (filtered): 0.301367
+2022-10-24 22:33:24,271 - INFO: Total Hits (filtered) @ 1: 0.236371
+2022-10-24 22:33:24,271 - INFO: Total Hits (filtered) @ 3: 0.328059
+2022-10-24 22:33:24,271 - INFO: Total Hits (filtered) @ 10: 0.430423
+2022-10-24 23:54:07,551 - INFO: Epoch: 23000 - Validation
+2022-10-24 23:54:07,636 - INFO: Total MRR (filtered): 0.297041
+2022-10-24 23:54:07,637 - INFO: Total Hits (filtered) @ 1: 0.231033
+2022-10-24 23:54:07,637 - INFO: Total Hits (filtered) @ 3: 0.325772
+2022-10-24 23:54:07,637 - INFO: Total Hits (filtered) @ 10: 0.420892
+2022-10-25 01:14:40,307 - INFO: Epoch: 24000 - Validation
+2022-10-25 01:14:40,461 - INFO: Total MRR (filtered): 0.298208
+2022-10-25 01:14:40,461 - INFO: Total Hits (filtered) @ 1: 0.234083
+2022-10-25 01:14:40,461 - INFO: Total Hits (filtered) @ 3: 0.322722
+2022-10-25 01:14:40,461 - INFO: Total Hits (filtered) @ 10: 0.423180

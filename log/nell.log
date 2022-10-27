@@ -1,0 +1,135 @@
+2022-10-23 15:56:58,460 - INFO: Namespace(bases=100, dataset='NELL-995', dropout=0.3, embed_size=100, evaluate_every=1000, few=3, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=64, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-23 15:57:59,243 - INFO: Epoch: 0 - Validation
+2022-10-23 15:57:59,256 - INFO: Total MRR (filtered): 0.109682
+2022-10-23 15:57:59,256 - INFO: Total Hits (filtered) @ 1: 0.069755
+2022-10-23 15:57:59,256 - INFO: Total Hits (filtered) @ 3: 0.125133
+2022-10-23 15:57:59,256 - INFO: Total Hits (filtered) @ 10: 0.190628
+2022-10-23 15:58:37,047 - INFO: Namespace(bases=100, dataset='NELL-995', dropout=0.3, embed_size=100, evaluate_every=1000, few=3, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=64, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-23 15:59:35,899 - INFO: Epoch: 0 - Validation
+2022-10-23 15:59:35,901 - INFO: Total MRR (filtered): 0.109682
+2022-10-23 15:59:35,901 - INFO: Total Hits (filtered) @ 1: 0.069755
+2022-10-23 15:59:35,901 - INFO: Total Hits (filtered) @ 3: 0.125133
+2022-10-23 15:59:35,901 - INFO: Total Hits (filtered) @ 10: 0.190628
+2022-10-23 18:00:04,290 - INFO: Epoch: 1000 - Validation
+2022-10-23 18:00:04,556 - INFO: Total MRR (filtered): 0.135498
+2022-10-23 18:00:04,556 - INFO: Total Hits (filtered) @ 1: 0.077742
+2022-10-23 18:00:04,556 - INFO: Total Hits (filtered) @ 3: 0.146965
+2022-10-23 18:00:04,556 - INFO: Total Hits (filtered) @ 10: 0.258786
+2022-10-23 20:36:11,831 - INFO: Epoch: 2000 - Validation
+2022-10-23 20:36:12,001 - INFO: Total MRR (filtered): 0.176684
+2022-10-23 20:36:12,001 - INFO: Total Hits (filtered) @ 1: 0.120341
+2022-10-23 20:36:12,001 - INFO: Total Hits (filtered) @ 3: 0.200213
+2022-10-23 20:36:12,001 - INFO: Total Hits (filtered) @ 10: 0.284878
+2022-10-23 23:27:39,746 - INFO: Epoch: 3000 - Validation
+2022-10-23 23:27:39,938 - INFO: Total MRR (filtered): 0.203486
+2022-10-23 23:27:39,938 - INFO: Total Hits (filtered) @ 1: 0.141640
+2022-10-23 23:27:39,938 - INFO: Total Hits (filtered) @ 3: 0.238019
+2022-10-23 23:27:39,939 - INFO: Total Hits (filtered) @ 10: 0.317359
+2022-10-24 02:30:06,386 - INFO: Epoch: 4000 - Validation
+2022-10-24 02:30:06,536 - INFO: Total MRR (filtered): 0.209815
+2022-10-24 02:30:06,537 - INFO: Total Hits (filtered) @ 1: 0.146965
+2022-10-24 02:30:06,537 - INFO: Total Hits (filtered) @ 3: 0.239617
+2022-10-24 02:30:06,537 - INFO: Total Hits (filtered) @ 10: 0.337593
+2022-10-24 05:33:20,112 - INFO: Epoch: 5000 - Validation
+2022-10-24 05:33:20,224 - INFO: Total MRR (filtered): 0.221888
+2022-10-24 05:33:20,224 - INFO: Total Hits (filtered) @ 1: 0.158679
+2022-10-24 05:33:20,224 - INFO: Total Hits (filtered) @ 3: 0.248669
+2022-10-24 05:33:20,224 - INFO: Total Hits (filtered) @ 10: 0.349308
+2022-10-24 08:31:49,263 - INFO: Epoch: 6000 - Validation
+2022-10-24 08:31:49,377 - INFO: Total MRR (filtered): 0.227234
+2022-10-24 08:31:49,377 - INFO: Total Hits (filtered) @ 1: 0.161874
+2022-10-24 08:31:49,377 - INFO: Total Hits (filtered) @ 3: 0.258786
+2022-10-24 08:31:49,377 - INFO: Total Hits (filtered) @ 10: 0.360490
+2022-10-24 11:51:10,476 - INFO: Epoch: 7000 - Validation
+2022-10-24 11:51:10,639 - INFO: Total MRR (filtered): 0.235195
+2022-10-24 11:51:10,639 - INFO: Total Hits (filtered) @ 1: 0.170394
+2022-10-24 11:51:10,639 - INFO: Total Hits (filtered) @ 3: 0.265176
+2022-10-24 11:51:10,639 - INFO: Total Hits (filtered) @ 10: 0.365815
+2022-10-24 15:05:20,613 - INFO: Epoch: 8000 - Validation
+2022-10-24 15:05:20,793 - INFO: Total MRR (filtered): 0.245405
+2022-10-24 15:05:20,793 - INFO: Total Hits (filtered) @ 1: 0.177316
+2022-10-24 15:05:20,793 - INFO: Total Hits (filtered) @ 3: 0.283813
+2022-10-24 15:05:20,793 - INFO: Total Hits (filtered) @ 10: 0.376464
+2022-10-24 18:10:54,615 - INFO: Epoch: 9000 - Validation
+2022-10-24 18:10:54,724 - INFO: Total MRR (filtered): 0.245539
+2022-10-24 18:10:54,724 - INFO: Total Hits (filtered) @ 1: 0.175186
+2022-10-24 18:10:54,724 - INFO: Total Hits (filtered) @ 3: 0.281683
+2022-10-24 18:10:54,725 - INFO: Total Hits (filtered) @ 10: 0.379659
+2022-10-24 21:16:48,947 - INFO: Epoch: 10000 - Validation
+2022-10-24 21:16:49,064 - INFO: Total MRR (filtered): 0.246827
+2022-10-24 21:16:49,064 - INFO: Total Hits (filtered) @ 1: 0.179446
+2022-10-24 21:16:49,064 - INFO: Total Hits (filtered) @ 3: 0.281150
+2022-10-24 21:16:49,064 - INFO: Total Hits (filtered) @ 10: 0.375932
+2022-10-25 00:13:58,847 - INFO: Epoch: 11000 - Validation
+2022-10-25 00:13:58,968 - INFO: Total MRR (filtered): 0.246235
+2022-10-25 00:13:58,968 - INFO: Total Hits (filtered) @ 1: 0.179446
+2022-10-25 00:13:58,968 - INFO: Total Hits (filtered) @ 3: 0.278488
+2022-10-25 00:13:58,968 - INFO: Total Hits (filtered) @ 10: 0.375399
+2022-10-25 03:25:14,334 - INFO: Epoch: 12000 - Validation
+2022-10-25 03:25:14,441 - INFO: Total MRR (filtered): 0.248082
+2022-10-25 03:25:14,442 - INFO: Total Hits (filtered) @ 1: 0.182109
+2022-10-25 03:25:14,442 - INFO: Total Hits (filtered) @ 3: 0.282748
+2022-10-25 03:25:14,442 - INFO: Total Hits (filtered) @ 10: 0.371139
+2022-10-25 06:51:13,110 - INFO: Epoch: 13000 - Validation
+2022-10-25 06:51:13,228 - INFO: Total MRR (filtered): 0.251437
+2022-10-25 06:51:13,229 - INFO: Total Hits (filtered) @ 1: 0.183706
+2022-10-25 06:51:13,229 - INFO: Total Hits (filtered) @ 3: 0.287007
+2022-10-25 06:51:13,229 - INFO: Total Hits (filtered) @ 10: 0.375932
+2022-10-25 10:13:52,334 - INFO: Epoch: 14000 - Validation
+2022-10-25 10:13:52,589 - INFO: Total MRR (filtered): 0.249872
+2022-10-25 10:13:52,589 - INFO: Total Hits (filtered) @ 1: 0.182641
+2022-10-25 10:13:52,589 - INFO: Total Hits (filtered) @ 3: 0.283280
+2022-10-25 10:13:52,589 - INFO: Total Hits (filtered) @ 10: 0.378062
+2022-10-25 13:32:08,566 - INFO: Epoch: 15000 - Validation
+2022-10-25 13:32:08,754 - INFO: Total MRR (filtered): 0.250019
+2022-10-25 13:32:08,754 - INFO: Total Hits (filtered) @ 1: 0.184771
+2022-10-25 13:32:08,754 - INFO: Total Hits (filtered) @ 3: 0.284878
+2022-10-25 13:32:08,754 - INFO: Total Hits (filtered) @ 10: 0.378594
+2022-10-25 16:34:11,885 - INFO: Epoch: 16000 - Validation
+2022-10-25 16:34:12,214 - INFO: Total MRR (filtered): 0.250368
+2022-10-25 16:34:12,215 - INFO: Total Hits (filtered) @ 1: 0.187966
+2022-10-25 16:34:12,215 - INFO: Total Hits (filtered) @ 3: 0.277955
+2022-10-25 16:34:12,215 - INFO: Total Hits (filtered) @ 10: 0.378594
+2022-10-25 19:35:45,289 - INFO: Epoch: 17000 - Validation
+2022-10-25 19:35:45,683 - INFO: Total MRR (filtered): 0.251796
+2022-10-25 19:35:45,683 - INFO: Total Hits (filtered) @ 1: 0.184771
+2022-10-25 19:35:45,683 - INFO: Total Hits (filtered) @ 3: 0.281150
+2022-10-25 19:35:45,683 - INFO: Total Hits (filtered) @ 10: 0.382854
+2022-10-25 22:37:37,772 - INFO: Epoch: 18000 - Validation
+2022-10-25 22:37:37,863 - INFO: Total MRR (filtered): 0.254727
+2022-10-25 22:37:37,863 - INFO: Total Hits (filtered) @ 1: 0.191161
+2022-10-25 22:37:37,863 - INFO: Total Hits (filtered) @ 3: 0.284878
+2022-10-25 22:37:37,863 - INFO: Total Hits (filtered) @ 10: 0.382854
+2022-10-26 01:39:39,852 - INFO: Epoch: 19000 - Validation
+2022-10-26 01:39:40,059 - INFO: Total MRR (filtered): 0.251516
+2022-10-26 01:39:40,059 - INFO: Total Hits (filtered) @ 1: 0.186901
+2022-10-26 01:39:40,059 - INFO: Total Hits (filtered) @ 3: 0.281150
+2022-10-26 01:39:40,059 - INFO: Total Hits (filtered) @ 10: 0.378062
+2022-10-26 02:55:16,792 - INFO: Namespace(bases=100, dataset='NELL-995', dropout=0.3, embed_size=100, evaluate_every=1000, few=1, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=32, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-26 02:56:03,060 - INFO: Namespace(bases=100, dataset='NELL-995', dropout=0.3, embed_size=100, evaluate_every=1000, few=1, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=32, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-26 02:57:54,678 - INFO: Total MRR (filtered): 0.209273
+2022-10-26 02:57:54,706 - INFO: Total Hits (filtered) @ 1: 0.152837
+2022-10-26 02:57:54,707 - INFO: Total Hits (filtered) @ 3: 0.237230
+2022-10-26 02:57:54,707 - INFO: Total Hits (filtered) @ 10: 0.317383
+2022-10-26 03:13:23,094 - INFO: Namespace(bases=100, dataset='NELL-995', dropout=0.3, embed_size=100, evaluate_every=1000, few=3, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=64, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-26 03:13:40,372 - INFO: Namespace(bases=100, dataset='NELL-995', dropout=0.3, embed_size=100, evaluate_every=1000, few=3, fine_tune=True, gpu=0, lr=0.001, margin=1.0, max_few=10, model='TransGEN', model_tail='log', n_epochs=25000, negative_sample=64, num_train_entity=500, pre_train=True, pre_train_emb_size='100', pre_train_model='DistMult', score_function='DistMult', seed=42, weight_decay=0.0)
+2022-10-26 04:56:51,566 - INFO: Epoch: 20000 - Validation
+2022-10-26 04:56:51,802 - INFO: Total MRR (filtered): 0.243980
+2022-10-26 04:56:51,803 - INFO: Total Hits (filtered) @ 1: 0.174654
+2022-10-26 04:56:51,803 - INFO: Total Hits (filtered) @ 3: 0.284345
+2022-10-26 04:56:51,803 - INFO: Total Hits (filtered) @ 10: 0.378594
+2022-10-26 08:12:48,097 - INFO: Epoch: 21000 - Validation
+2022-10-26 08:12:48,171 - INFO: Total MRR (filtered): 0.250091
+2022-10-26 08:12:48,172 - INFO: Total Hits (filtered) @ 1: 0.183174
+2022-10-26 08:12:48,172 - INFO: Total Hits (filtered) @ 3: 0.291800
+2022-10-26 08:12:48,172 - INFO: Total Hits (filtered) @ 10: 0.375932
+2022-10-26 11:16:48,536 - INFO: Epoch: 22000 - Validation
+2022-10-26 11:16:48,714 - INFO: Total MRR (filtered): 0.250911
+2022-10-26 11:16:48,715 - INFO: Total Hits (filtered) @ 1: 0.186901
+2022-10-26 11:16:48,715 - INFO: Total Hits (filtered) @ 3: 0.286475
+2022-10-26 11:16:48,715 - INFO: Total Hits (filtered) @ 10: 0.370607
+2022-10-26 14:19:38,120 - INFO: Epoch: 23000 - Validation
+2022-10-26 14:19:38,237 - INFO: Total MRR (filtered): 0.247405
+2022-10-26 14:19:38,237 - INFO: Total Hits (filtered) @ 1: 0.181044
+2022-10-26 14:19:38,237 - INFO: Total Hits (filtered) @ 3: 0.284345
+2022-10-26 14:19:38,237 - INFO: Total Hits (filtered) @ 10: 0.374867
