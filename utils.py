@@ -110,7 +110,7 @@ def cal_mrr(decoder, z, total_unseen_entity, total_unseen_entity_embedding, all_
     head_relation_triplets = all_triplets[:, :2]
     tail_relation_triplets = torch.stack((all_triplets[:, 2], all_triplets[:, 1])).transpose(0, 1)
 
-    for entity, test_triplets in total_test_triplets_dict.items():
+    for idx, (entity, test_triplets) in enumerate(total_test_triplets_dict.items()):
     # 对于每个测试的元组都计算一个可能成为其头节点或者尾节点的entity
 
         if use_cuda:
@@ -151,10 +151,10 @@ def cal_mrr(decoder, z, total_unseen_entity, total_unseen_entity_embedding, all_
                 # Score
                 if score_function == 'DistMult':
 
-                    emb_ar = decoder(all_entity_embeddings[subject], z) * all_relation_embeddings[relation]
+                    emb_ar = decoder(all_entity_embeddings[subject], z[idx]) * all_relation_embeddings[relation]
                     emb_ar = emb_ar.view(-1, 1, 1)
 
-                    emb_c = decoder(all_entity_embeddings[perturb_entity_index], z)
+                    emb_c = decoder(all_entity_embeddings[perturb_entity_index], z[idx])
                     emb_c = emb_c.transpose(0, 1).unsqueeze(1)
 
                     out_prod = torch.bmm(emb_ar, emb_c)
@@ -162,10 +162,13 @@ def cal_mrr(decoder, z, total_unseen_entity, total_unseen_entity_embedding, all_
                     
                 elif score_function == 'TransE':
 
-                    head_embedding = all_entity_embeddings[subject]
+                    # head_embedding = all_entity_embeddings[subject]
+                    # relation_embedding = all_relation_embeddings[relation]
+                    # tail_embeddings = all_entity_embeddings[perturb_entity_index]
+                    head_embedding = decoder(all_entity_embeddings[subject], z[idx])
                     relation_embedding = all_relation_embeddings[relation]
-                    tail_embeddings = all_entity_embeddings[perturb_entity_index]
-
+                    tail_embeddings = decoder(all_entity_embeddings[perturb_entity_index], z[idx])
+                    
                     score = - torch.norm((head_embedding + relation_embedding - tail_embeddings), p = 2, dim = 1)
                     score = score.view(1, -1)
 
