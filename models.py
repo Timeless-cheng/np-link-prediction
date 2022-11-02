@@ -8,6 +8,7 @@ from collections import OrderedDict
 from torch_geometric.nn import RGCNConv
 from torch_geometric.nn.inits import uniform
 from torch_geometric.nn.conv import MessagePassing
+from attention import Attention
 
 class EntityEmbedding(nn.Module):
 
@@ -301,4 +302,93 @@ class Decoder(nn.Module):
     def forward(self, embed, z):
 
         return embed + self.enc_z(z)
+
+
+# For Attention
+class Deterministic_Encoder(nn.Module):
+    '''
+        Deterministic Encoder
+    '''
+
+    def __init__(self, input_dim, layer_sizes=[500, 200], num_latents=100, attention = None):
+        '''
+            Np deterministic encoder
+            
+            Args:
+                input_dim : x_dim + y_dim
+                layer_sizes : the array of each lyaer size in encoding MLP
+                num_latents : the latent dimensionality
+        '''
+
+        super().__init__()
+
+        # Attention
+        self._attention = attention
         
+        device = torch.device('cuda')
+        embedding_type = 'mlp'
+        layer_sizes = [100, 100]
+        dim = {'q_last_dim' : 300, 'k_last_dim' : 300, \
+                'v_last_dim' : 100}
+        att_type = 'multihead'
+        self._attention_model = Attention(device, embedding_type, layer_sizes, dim, att_type)
+            
+        # Layer size
+        self._layer_sizes = layer_sizes
+
+        # Output dim
+        self._num_latents = num_latents
+
+        # MLP embedding architectures
+        self._layers = nn.ModuleList([])
+        for i in range(len(self._layer_sizes)):
+            if i == 0:
+                self._layers.append(nn.Linear(input_dim*3+1, self._layer_sizes[0]))
+            else:
+                self._layers.append(nn.Linear(self._layer_sizes[i-1], self._layer_sizes[i]))
+
+        self._last_layer = nn.Linear(self._layer_sizes[-1], self._num_latents)
+
+    def forward(self, encoder_input, target_x=None):
+        '''
+            Ecoding the input into representation using latent encoder
+
+            Args:
+                context_x: [batch_size, the number of observation, x_size(dimension)] 
+                context_y : [batch_size, the number of observation, y_size(dimension)] 
+
+            Returns:
+                representation : [batch_size, the nmber of observation, num_lantents]
+        '''
+
+        # task_size, _, filter_size = tuple(encoder_input.shape)
+        input_shape = tuple(encoder_input.shape)
+
+        # Input
+        # hidden = encoder_input.view((-1, filter_size))
+        hidden = encoder_input.view((-1, input_shape[-1]))
+
+        # MLP embedidng for NP
+        for i, layer in enumerate(self._layers):
+            hidden = F.relu(layer(hidden))
+
+        # Last layer
+        hidden = self._last_layer(hidden)
+
+        # Reshaping
+        # hidden = hidden.view((task_size, -1, self._num_latents)) # [batch_size, the number of point, the last element in the list]
+        # [1200, 128] --> 
+        hidden = hidden.view((*input_shape[:-2], -1, self._num_latents)) # [(n_sample, batch_size), the number of point, the last element in the list]
+
+        if self._attention is not None:
+            # Attentive neural process
+            context_x = encoder_input[:, :, :-1]
+            rep, weights = self._attention_model(target_x[:, :, :-1], context_x, hidden)
+            
+        else:
+            # Conditional neural processes
+            # Aggregation of representation
+            rep = hidden.mean(dim=-2)
+            weights = None
+
+        return rep, weights 

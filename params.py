@@ -6,9 +6,11 @@ def get_params():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--margin", type=float, default=1.0)
-    parser.add_argument("--n-epochs", type=int, default=25000)
+    parser.add_argument("--n-epochs", type=int, default=50000)
     parser.add_argument("--dataset", type=str, default='FB15k-237')
-    parser.add_argument("--negative-sample", type=int, default=32)   # 32
+    parser.add_argument("--negative-sample", type=int, default=16)   # 32
+
+    parser.add_argument("--attention", default=True, help="use attention or not")
 
     # parser.add_argument("--pre-train", action='store_true')
     # parser.add_argument("--fine-tune", action='store_true')

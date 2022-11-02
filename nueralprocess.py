@@ -6,9 +6,10 @@ from torch.distributions import kl_divergence
 import numpy as np
 import random
 import os
+import logging
 import copy
 
-from models import Decoder, LatentEncoder, MuSigmaEncoder, EntityEmbedding
+from models import Decoder, LatentEncoder, MuSigmaEncoder, EntityEmbedding, Deterministic_Encoder
 from utils import load_data, load_processed_data, cal_mrr
 
 class NueralProcess(nn.Module):
@@ -23,12 +24,17 @@ class NueralProcess(nn.Module):
         self.load_pretrain_embedding()
         self.embed = EntityEmbedding(self.args.embed_size, self.args.embed_size, num_entity, num_relation,
                             args = self.args, entity_embedding = self.pretrain_entity_embedding, relation_embedding = self.pretrain_relation_embedding)
+        
+        self._deterministic_encoder = Deterministic_Encoder(args.embed_size, [500, 200], args.embed_size, self.args.attention)
         # MLP
         self.latent_encoder = LatentEncoder(embed_size=args.embed_size, num_hidden1=500, num_hidden2=200,
                                 r_dim=args.embed_size, dropout_p=0.5)
         # MuSigma
         self.dist = MuSigmaEncoder(args.embed_size, args.embed_size)
-        # Decoder
+        # if self.args.attention:
+        #     self.decoder = Decoder_attention(self.args, self.args.embed_size)
+        # else:    
+        #     # Decoder
         self.decoder = Decoder(self.args, self.args.embed_size)
         
         # We set the embedding of unseen entities as the zero vector.
@@ -84,13 +90,15 @@ class NueralProcess(nn.Module):
 
         return embeddings
 
-    def cal_score(self, query_embeds, z):
+    def cal_score(self, query_embeds, z, r):
         h = query_embeds[:, :100]
         r = query_embeds[:, 100:200]
         t = query_embeds[:, 200:300]
 
         h = self.decoder(h, z)
+        h = self.decoder(h, r)
         t = self.decoder(t, z)
+        t = self.decoder(t, r)
 
         if self.args.score_function == 'DistMult':
             score = h * r * t
@@ -179,9 +187,17 @@ class NueralProcess(nn.Module):
     def forward(self, epoch, data_loaders):
         data = data_loaders.get_query_support(epoch)
         total_unseen_entity = data[0]
-
+        
         # Encoder
         total_unseen_entity_embedding, s_p_emb, s_n_emb, q_p_emb, q_n_emb = self.get_embeddings(data)
+        
+        # Deterministic Encoder
+        support_embs = torch.cat([s_p_emb, s_n_emb], dim=-2)
+        query_embs = torch.cat([q_p_emb, q_n_emb], dim=-2)
+        deterministic_rep, _ = self._deterministic_encoder(support_embs, query_embs)    # [batch_size, nums of query pos + neg, emb_dim]\
+        deterministic_rep = deterministic_rep.mean(-2)
+
+        # Stochastic Encoder
         s_pos_r = self.latent_encoder(s_p_emb)
         s_neg_r = self.latent_encoder(s_n_emb)
         q_pos_r = self.latent_encoder(q_p_emb)
@@ -193,7 +209,7 @@ class NueralProcess(nn.Module):
         target_dists = torch.mean(t_r, dim=1)
         context_dist = self.dist(context_dists)
         target_dist = self.dist(target_dists)
-        z = target_dist.rsample()
+        z = target_dist.rsample()   # [batch_size, latent_dim]
         kld = kl_divergence(target_dist, context_dist).sum(-1)
 
         # Decoder
@@ -207,23 +223,32 @@ class NueralProcess(nn.Module):
         query_emb_n = self.embed_concat(total_unseen_entity, total_unseen_entity_embedding, query_neg_triplets)
         total_query_embs = torch.cat([query_emb_p, query_emb_n], dim=0)
         
-        # z: positive + negative
+        # deterministic
+        r_pos = deterministic_rep.repeat(1, query_pos_triplets.shape[1]).view(-1, 100)
+        r_neg = deterministic_rep.repeat(1, query_pos_triplets.shape[1] * self.args.negative_sample).view(-1, 100)
+        r_all = torch.cat([r_pos, r_neg], dim=0)
+
+        # stochastic: positive + negative
         z_pos = z.repeat(1, query_pos_triplets.shape[1]).view(-1, 100)
         z_neg = z.repeat(1, query_pos_triplets.shape[1] * self.args.negative_sample).view(-1, 100)
         z_all = torch.cat([z_pos, z_neg], dim=0)
-        score = self.cal_score(total_query_embs, z_all)
-        pos_score = score[:len(query_emb_p)]
-        neg_score = score[len(query_emb_p):]
-        y = torch.ones(len(query_emb_p) * self.args.negative_sample)
+
+        batch_size = z.shape[0]
+        score = self.cal_score(total_query_embs, z_all, r_all)
+        pos_score = score[:len(query_emb_p)].view(-1, 1).repeat(1, self.args.negative_sample).view(batch_size, -1)
+        neg_score = score[len(query_emb_p):].view(batch_size, -1)
+
+        y = torch.ones(len(query_emb_p) * self.args.negative_sample).view(batch_size, -1)
         if self.use_cuda:
             y = y.cuda()
-        pos_score = pos_score.repeat(self.args.negative_sample)
+
         hinge_loss = F.margin_ranking_loss(pos_score, neg_score, y, margin=self.args.margin)
 
         kl_loss = kld.mean(0)
 
         loss = kl_loss + hinge_loss
         if (epoch + 1) % 100 == 0:
+            logging.info("Epoch: {} \t loss: {:.4f} \t kl: {:.4f} \t hingeloss: {:.4f}".format(epoch, loss, kl_loss, hinge_loss))
             print("Epoch: {} \t loss: {:.4f} \t kl: {:.4f} \t hingeloss: {:.4f}".format(epoch, loss, kl_loss, hinge_loss))
         print("Epoch: {} \t loss: {} \t kl: {} \t hingeloss: {}".format(epoch, loss, kl_loss, hinge_loss))
 

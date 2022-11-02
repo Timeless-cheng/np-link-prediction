@@ -10,7 +10,6 @@ from tqdm import tqdm
 from params import get_params
 from utils import set_seed, load_data, load_processed_data
 
-
 class Trainer(object):
 
     def __init__(self, args, data_loaders, all_triplets, meta_task_entity, num_entity, num_relation):
@@ -50,8 +49,8 @@ class Trainer(object):
             self.optimizer.step()
 
             # Meta-Valid
-            # if epoch % self.args.evaluate_every == 0:
-            if 1:
+            if epoch % self.args.evaluate_every == 0:
+            # if 1:
                 print("-------------------------------------Valid---------------------------------------")
                 with torch.no_grad():
                     self.model.eval()
@@ -92,10 +91,10 @@ class Trainer(object):
 if __name__ == '__main__':
 
     args = get_params()
+    filename = './log/' + args.dataset + '.log'
+    logging.basicConfig(level=logging.INFO, filename=filename, filemode='a', format='%(asctime)s - %(levelname)s: %(message)s')
     logging.info(args)
     print(args)
-    filename = args.dataset + '.log'
-    logging.basicConfig(level=logging.INFO, filename=filename, filemode='a', format='%(asctime)s - %(levelname)s: %(message)s')
     
     set_seed(args.seed)
     entity2id, relation2id, train_triplets, valid_triplets, test_triplets = load_data('./Dataset/raw_data/{}'.format(args.dataset))
